@@ -37,5 +37,8 @@ const struct S
         Write<u16>(0x53E923, 0x43EB);
         Write<u8>(0x53E99F, 0x10);
         MakeNop(0x53E9A5, 1);
+
+        // make the game pick the best refresh rate instead of 60
+        MakeRet0(0x7460A0);
     }
 } s;
